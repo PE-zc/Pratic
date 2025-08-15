@@ -22,3 +22,23 @@ A quarta e última task temos o método passado como "totalTimeInMinutes(int lay
 Passado os parâmetros no método, basta dar um "return layers * 2 + minutes" para retornar o tempo total baseado nas camadas e o tempo de forno.
     
     
+2.Annalyn
+
+Neste exercício, o objetivo é implementar uma lógica para um jogo de RPG em que o personaem principal é a Annalyn.
+No RPG tem algumas ações que os personagens podem ou não executar, ele nos da algumas situações que vamos resolver com operedores booleanos.
+
+2.1 Verificar se pode efetuar um ataque rápido
+Para saber se era possível efetuar o ataque, precisavamos saber se o cavaleiro estava acordado ou não.
+Para isso temos o método "canFastAttack(boolean knightIsAwake)" com o parâmetro do cavaleiro como um booleano, abaixo definimos a variável
+"boolean canFastAttack =! knightIsAwake" o operador "=!" compara se são diferentes, então se "knightIsAwake" for "true" o método "canFastAttack" vai ser "false".
+Dando um "return canFastAttack" resolvendo a primeira task do RPG.
+
+2.2 Verificar se o grupo pode ser espionado
+Para saber se o grupo pode ser espionado temos três booleanos, assim como no primeiro se estão acordados ou não. O método retorna true se
+o grupo pode ser espionado. Então no método "canSpy" passamos todos os booleanos "canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake)".
+Para o método retornar verdadeiro basta um dos personagens estarem acordados, então podemos definir a variável "boolean canSpy = knightIsAwake || archerIsAwake || prisonerIsAwake"
+o operador "||" é representado como "OR"(OU), então se um dos personagens retornar "true" o método retorna "true", resolvendo a segunda ação do RPG.
+
+
+
+
