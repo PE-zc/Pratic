@@ -39,6 +39,19 @@ o grupo pode ser espionado. Então no método "canSpy" passamos todos os boolean
 Para o método retornar verdadeiro basta um dos personagens estarem acordados, então podemos definir a variável "boolean canSpy = knightIsAwake || archerIsAwake || prisonerIsAwake"
 o operador "||" é representado como "OR"(OU), então se um dos personagens retornar "true" o método retorna "true", resolvendo a segunda ação do RPG.
 
+2.3 Verificar se o prisioneiro pode ser sinalizado
+Semelhante a primeira task precisamos saber se o prisioneiro pode ser alertado, temos 2 valores booleanos, "archerIsAwake" e "prisonerIsAwake", porém caso o "prisonerIsAwake" seja
+"false" o método precisa retornar "false" também. Então passamos o método "canSignalPrisoner" com os 2 valores boolenos como parâmetro. Definimos a função do método assim
+"boolen canSignalPrisoner =! archerIsAwake && prisonerIsAwake" colocando o operador "=!" e logo após o booleano "archerIsAwake" definimos que mesmo que ela retorne "true" e "prisonerIsAwake"
+retorne "false" o método vai retornar "false", e o operador "&&" que é representado como "AND(E)" que pega esses dois booleanos e só retorna "true" caso os dois valores sejam "true", porém 
+com o "!" nós mudamos essa lógica, podendo retornar "true" mesmo que "archerIsAwake" seja falso, semelhante a primeira task.
+
+2.4 Verificar se o prisioneiro pode ser liberto
+Nesta task ela reune todos os booleanos citados e um a mais, o pet da annalyn, então temos 4 valores booleanos. A condição para o método "canFreePrisoner" retornar "true" é que tenha
+as condições ideais pra ele escapar, caso o cavaleiro esteja acordado e o cachorro não estivesse presente ele não escapa, e caso estivesse a arqueira arcordada ele também não escaparia.
+Então para implementar essa lógica escrevemos o código assim "boolean canFreePrisoner = petDogIsPresent && !archerIsAwake || prisonerIsAwake && !petDogIsPresent && !knightIsAwake && !archerIsAwake;"
+na primeira parte colocamos caso o cachorro não esteja presente e arqueira esteja acordada ele retorna "false", e a outra parte caso nenhum deles esteja acordado ele pode escapar, dividimos o código
+pois o cavaleiro e a arqueira agem de maneira oposta caso o cachorro esteja presente.
 
 
 
